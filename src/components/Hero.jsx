@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "../styles/components/Hero.css";
-import "../../public/images/Albatross_Interactive_Logo.png";
+import "/images/Albatross_Interactive_Logo.png";
 
 const Hero = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -24,7 +24,7 @@ const Hero = () => {
         }}
       >
         <img
-          src="../../public/images/Albatross_Interactive_Logo.png"
+          src="/images/Albatross_Interactive_Logo.png"
           alt="Hero"
           className="imghero"
         />
