@@ -8,6 +8,11 @@
   transition: all 0.3s ease;
 }
 
+button:focus {
+  outline: none;
+  /* foco personalizado */
+}
+
 .navbar.scrolled {
   background: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(10px);
