@@ -1,0 +1,78 @@
+.category-section {
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5%;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.category-section h2 {
+  position: absolute;
+  color: #ff6b6b;
+  font-family: "Azeret Mono", monospace;
+  font-size: 120px;
+  font-weight: 700;
+  letter-spacing: -5px;
+  line-height: 1;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.images-container {
+  display: flex;
+  gap: 2rem;
+  height: 100%;
+  align-items: center;
+  padding-left: 40%;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.image-number {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  color: #fff;
+  font-family: "Azeret Mono", monospace;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content-container {
+  position: relative;
+  z-index: 3;
+  max-width: 800px;
+  text-align: center;
+}
+
+.content-text {
+  color: #fff;
+  font-size: 24px;
+  line-height: 1.6;
+  font-family: system-ui, -apple-system, sans-serif;
+  opacity: 0.9;
+}

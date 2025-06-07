@@ -1,0 +1,136 @@
+.hero-section {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  scroll-snap-align: start;
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 2;
+  margin-bottom: 2rem;
+}
+
+.hero-content h1 {
+  color: #fff;
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-family: "Azeret Mono", monospace;
+}
+
+.hero-content p {
+  color: #ff6b6b;
+  font-size: 1.5rem;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.imghero {
+  width: 900px;
+  height: auto;
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/images/hero-bg.jpg") no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.hero-content {
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+/* Media Queries para Hero */
+@media screen and (max-width: 992px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero p {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 0 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero {
+    padding: 0 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Ajustes para diferentes orientaciones */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  .hero {
+    height: 100vh;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+}

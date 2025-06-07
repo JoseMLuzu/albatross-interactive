@@ -1,0 +1,72 @@
+.team-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+  scroll-snap-align: start;
+  padding: 2rem 0;
+}
+
+.team-section h2 {
+  font-size: 3rem;
+  margin-bottom: 7rem;
+  font-weight: 700;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.member-image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 1px solid #fff; /* Optional: add a border */
+}
+
+.team-member h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.member-title {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.member-subtitle {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.member-separator {
+  width: 50%;
+  border: none;
+  border-top: 1px solid #fff;
+  margin: 1rem 0;
+}
+
+.member-additional-info p {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 0.3rem;
+}
