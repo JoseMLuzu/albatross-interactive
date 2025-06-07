@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "../styles/components/Navbar.css";
-import logoi from "../../public/images/Albatross_Interactive_Logo.png";
+import logoi from "../../public/images/Albatross_Interactive_Logo(1).png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,7 +30,10 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className="nav-content">
-        <div className="nav-logo" onClick={() => scrollToSection("hero")}>
+        <div
+          className="nav-logo desktop-logo"
+          onClick={() => scrollToSection("hero")}
+        >
           <img src={logoi} alt="Logo" />
         </div>
 
@@ -44,6 +47,13 @@ const Navbar = () => {
         </div>
 
         <div className={`nav-links ${isMenuOpen ? "active" : ""}`}>
+          <div className="mobile-logo">
+            <img
+              src={logoi}
+              alt="Logo"
+              onClick={() => scrollToSection("hero")}
+            />
+          </div>
           <button onClick={() => scrollToSection("team")}>Team</button>
           <button onClick={() => scrollToSection("about")}>About</button>
           <button onClick={() => scrollToSection("projects")}>Projects</button>

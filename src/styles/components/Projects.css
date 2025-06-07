@@ -8,37 +8,57 @@
   background-color: #000;
   color: #fff;
   scroll-snap-align: start;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 }
 
 .projects-content {
-  width: 90%;
+  width: 100%;
   max-width: 800px;
   text-align: center;
   padding: 0 1rem;
 }
 
+.project-image-container {
+  width: 100%;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.project-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.project-text-content {
+  width: 100%;
+  text-align: center;
+}
+
 .project-title {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 700;
   margin-bottom: 1rem;
-  color: #fff; /* Color del título */
+  color: #fff;
 }
 
 .project-description,
 .approach-text {
-  font-size: 17px;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
   margin-bottom: 1.2rem;
-  color: #ffffff; /* Color de la descripción */
-  line-height: 1.5;
+  color: #ffffff;
+  line-height: 1.6;
+  text-align: center;
 }
 
 .project-url a {
   font-size: 1rem;
-  color: #ffffffb0; /* Color del enlace */
+  color: #ffffffb0;
   text-decoration: none;
   margin-bottom: 2rem;
-  display: inline-block; /* Para aplicar margin-bottom */
+  display: inline-block;
   transition: color 0.3s ease;
 }
 
@@ -47,16 +67,21 @@
 }
 
 .approach-title {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 700;
   margin-top: 2rem;
   margin-bottom: 1.5rem;
-  color: #fff; /* Color del título Approach */
+  color: #fff;
+  text-align: center;
+}
+
+.approach-content {
+  text-align: center;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
   max-width: 1200px;
   width: 100%;
@@ -73,26 +98,218 @@
   transform: translateY(-10px);
 }
 
-.project-image {
-  width: 70%;
-  height: auto;
-  overflow: hidden;
-  margin-bottom: 20px;
-}
-
 .project-info {
   padding: 1.5rem;
 }
 
 .project-info h3 {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
   margin-bottom: 0.5rem;
   font-family: "Azeret Mono", monospace;
 }
 
 .project-info p {
   color: #ffffff;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
   line-height: 1.4;
+}
+
+/* Tablets y pantallas medianas */
+@media screen and (max-width: 768px) {
+  .projects-section {
+    padding: 2rem 0.75rem;
+  }
+
+  .projects-content {
+    padding: 0 0.75rem;
+  }
+
+  .project-image-container {
+    padding-top: 1.5rem;
+  }
+
+  .project-image {
+    max-width: 500px;
+  }
+
+  .project-title {
+    font-size: 2.2rem;
+  }
+
+  .project-description,
+  .approach-text {
+    font-size: 0.95rem;
+  }
+
+  .approach-title {
+    font-size: 1.6rem;
+  }
+}
+
+/* Móviles */
+@media screen and (max-width: 576px) {
+  .projects-section {
+    padding: 2rem 0.5rem;
+  }
+
+  .projects-content {
+    padding: 0 0.5rem;
+  }
+
+  .project-image-container {
+    padding-top: 1rem;
+  }
+
+  .project-image {
+    max-width: 400px;
+  }
+
+  .project-description,
+  .approach-text {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .approach-title {
+    font-size: 1.4rem;
+  }
+
+  .projects-grid {
+    gap: 1.2rem;
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    border-radius: 8px;
+  }
+
+  .project-info {
+    padding: 1rem;
+  }
+
+  .project-title {
+    font-size: 2rem;
+  }
+
+  .project-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-info p {
+    font-size: 0.95rem;
+  }
+
+  .project-url a {
+    font-size: 0.85rem;
+  }
+}
+
+/* Pantallas muy pequeñas */
+@media screen and (max-width: 360px) {
+  .projects-section {
+    padding: 1.5rem 0.25rem;
+  }
+
+  .projects-content {
+    padding: 0 0.25rem;
+  }
+
+  .project-image-container {
+    padding-top: 0.75rem;
+  }
+
+  .project-image {
+    max-width: 280px;
+  }
+
+  .project-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .project-description,
+  .approach-text {
+    font-size: 0.75rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .approach-title {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-info {
+    padding: 0.75rem;
+  }
+
+  .project-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-info p {
+    font-size: 0.85rem;
+  }
+
+  .project-url a {
+    font-size: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Pantallas extremadamente pequeñas */
+@media screen and (max-width: 280px) {
+  .projects-section {
+    padding: 1rem 0.15rem;
+  }
+
+  .projects-content {
+    padding: 0 0.15rem;
+  }
+
+  .project-image-container {
+    padding-top: 0.5rem;
+  }
+
+  .project-image {
+    max-width: 200px;
+    margin: 20px;
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-description,
+  .approach-text {
+    font-size: 0.65rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+
+  .approach-title {
+    font-size: 1rem;
+    margin-top: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .project-info {
+    padding: 0.5rem;
+  }
+
+  .project-info h3 {
+    font-size: 1rem;
+  }
+
+  .project-info p {
+    font-size: 0.75rem;
+  }
+
+  .project-url a {
+    font-size: 0.65rem;
+    margin-bottom: 1.25rem;
+  }
 }

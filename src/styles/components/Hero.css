@@ -1,4 +1,6 @@
-.hero-section {
+/* Hero Container */
+.hero-section,
+.hero {
   height: 100vh;
   width: 100%;
   position: relative;
@@ -9,45 +11,11 @@
   justify-content: center;
   background-color: #000;
   scroll-snap-align: start;
-}
-
-.hero-content {
-  text-align: center;
-  z-index: 2;
-  margin-bottom: 2rem;
-}
-
-.hero-content h1 {
-  color: #fff;
-  font-size: 5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  font-family: "Azeret Mono", monospace;
-}
-
-.hero-content p {
-  color: #ff6b6b;
-  font-size: 1.5rem;
-  font-family: system-ui, -apple-system, sans-serif;
-}
-
-.imghero {
-  width: 900px;
-  height: auto;
-}
-
-.hero {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
   padding: 0 2rem;
-  position: relative;
-  overflow: hidden;
 }
 
+/* Fondo con superposición */
 .hero::before {
   content: "";
   position: absolute;
@@ -61,33 +29,48 @@
   z-index: -1;
 }
 
+/* Contenido */
 .hero-content {
   max-width: 800px;
   width: 100%;
-  position: relative;
-  z-index: 1;
+  z-index: 2;
+  margin-bottom: 2rem;
 }
 
-.hero h1 {
+.hero-content h1 {
+  font-family: "Azeret Mono", monospace;
   font-size: 4rem;
+  font-weight: 700;
   margin-bottom: 1rem;
   color: #ffffff;
 }
 
-.hero p {
+.hero-content p {
   font-size: 1.5rem;
-  margin-bottom: 2rem;
-  color: #ffffff;
+  color: #ff6b6b;
+  font-family: system-ui, -apple-system, sans-serif;
 }
 
-/* Media Queries para Hero */
+/* Imagen principal */
+.imghero {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  padding: 0;
+}
+
+/* Media Queries */
 @media screen and (max-width: 992px) {
-  .hero h1 {
+  .hero-content h1 {
     font-size: 3.5rem;
   }
-
-  .hero p {
+  .hero-content p {
     font-size: 1.3rem;
+  }
+  .imghero {
+    max-width: 700px;
   }
 }
 
@@ -95,13 +78,14 @@
   .hero {
     padding: 0 1.5rem;
   }
-
-  .hero h1 {
+  .hero-content h1 {
     font-size: 3rem;
   }
-
-  .hero p {
+  .hero-content p {
     font-size: 1.2rem;
+  }
+  .imghero {
+    max-width: 500px;
   }
 }
 
@@ -109,28 +93,27 @@
   .hero {
     padding: 0 1rem;
   }
-
-  .hero h1 {
+  .hero-content h1 {
     font-size: 2.5rem;
   }
-
-  .hero p {
+  .hero-content p {
     font-size: 1.1rem;
+  }
+  .imghero {
+    max-width: 280px;
+    padding: 0 1rem;
   }
 }
 
-/* Ajustes para diferentes orientaciones */
 @media screen and (orientation: landscape) and (max-height: 500px) {
-  .hero {
-    height: 100vh;
-  }
-
-  .hero h1 {
+  .hero-content h1 {
     font-size: 2.5rem;
   }
-
-  .hero p {
+  .hero-content p {
     font-size: 1.1rem;
     margin-bottom: 1rem;
+  }
+  .imghero {
+    max-width: 300px;
   }
 }

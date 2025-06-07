@@ -84,6 +84,7 @@
   height: 21px;
   cursor: pointer;
   z-index: 1001;
+  margin-left: auto;
 }
 
 .hamburger span {
@@ -106,10 +107,30 @@
   transform: translateY(-9px) rotate(-45deg);
 }
 
+.mobile-logo {
+  display: none;
+}
+
+.mobile-logo img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
 /* Media Queries para Navbar */
 @media screen and (max-width: 768px) {
   .hamburger {
     display: flex;
+  }
+
+  .desktop-logo {
+    display: none;
+  }
+
+  .mobile-logo {
+    display: block;
   }
 
   .nav-links {
@@ -120,28 +141,52 @@
     height: 100vh;
     background: rgba(0, 0, 0, 0.95);
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 2rem;
-    transition: right 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding-top: 4rem;
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
   }
 
   .nav-links.active {
     right: 0;
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
   }
 
   .nav-links button {
     font-size: 1.5rem;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.3s ease;
+  }
+
+  .nav-links.active button {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .nav-links button:nth-child(2) {
+    transition-delay: 0.1s;
+  }
+  .nav-links button:nth-child(3) {
+    transition-delay: 0.2s;
+  }
+  .nav-links button:nth-child(4) {
+    transition-delay: 0.3s;
+  }
+  .nav-links button:nth-child(5) {
+    transition-delay: 0.4s;
   }
 }
 
 @media screen and (max-width: 576px) {
   .nav-content {
     padding: 0 1rem;
-  }
-
-  .nav-logo img {
-    height: 30px;
   }
 
   .hamburger {
@@ -151,5 +196,9 @@
 
   .nav-links button {
     font-size: 1.2rem;
+  }
+
+  .mobile-logo img {
+    height: 35px;
   }
 }
